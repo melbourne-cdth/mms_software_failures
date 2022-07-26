@@ -36,7 +36,7 @@ function typesof(x...)
     join(map(y->"type of $(y) is $(typeof(y))", x), "\n")
 end
 
-overflows =  HTML("""<details><summary><strong><h3>9223372036854775807+1 in other languages</h3></strong></summary>
+bignplus1 =  HTML("""<details><summary><strong><h3>9223372036854775807+1 in other languages</h3></strong></summary>
 <table>
   <tr>
     <th>Language</th>
@@ -54,6 +54,10 @@ overflows =  HTML("""<details><summary><strong><h3>9223372036854775807+1 in othe
     <td>R</td>
     <td>9223372036854775808</td>
   </tr>
+    <tr>
+    <td>Haskell</td>
+    <td>9223372036854775808</td>
+  </tr>
   <tr>
     <td>Rust</td>
     <td>9223372036854775807i64 + 1 attempt to compute `i64::MAX + 1_i64` which would overflow
@@ -62,4 +66,8 @@ this arithmetic operation will overflow</td>
 </table>
 <h2>Why would you ever let a language do what Julia does or Go/Rust does rather than what Python and R do?
 </h2>
+
+<h2> Key Concept</h2>
+
+<p style="color:#CD5C5C; font-size:48px">Computers are finite!</p><br>
 </details>""");
